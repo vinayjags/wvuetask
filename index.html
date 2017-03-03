@@ -3,11 +3,35 @@
     <head>
         <meta charset="utf-8">
         <title>Task Management System</title>
+        <script src="dist/static.bundle.js"></script>
     </head>
     <body>
         <div id="app">
-            <h3>{{ message }}</h3>
+            <nav class="nav has-shadow">
+                <div class="nav-left">
+                    <a class="nav-item">Task Managment System</a>
+                </div>
+
+                <span class="nav-toggle" @click='toggleMobileMenuClick'>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+
+                <!-- This "nav-menu" is hidden on mobile -->
+                <!-- Add the modifier "is-active" to display it on mobile -->
+                <div class="nav-right nav-menu" v-bind:class="{ 'is-active': toggleMobileMenu }" >
+                    <router-link to="/" class="nav-item" v-if='!store.isLoggedIn'>Login</router-link>
+                    <router-link to="/" class="nav-item" v-if='store.isLoggedIn'>Logout</router-link>
+                </div>
+
+            </nav>
+            <section class="section">
+                <div class="content">
+                    <router-view></router-view>
+                </div>
+            </section>
         </div>
     </body>
-    <script src="dist/build.js"></script>
+    <script src="dist/app.bundle.js"></script>
 </html>

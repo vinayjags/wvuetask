@@ -1,13 +1,20 @@
-import fonst from '../css/fonts.scss';
-require("../css/main.scss");
 import Vue from 'vue'
+import VueRouter from 'vue-router';
+import router from './router';
+import store from './store';
 
-new Vue({
+Vue.use(VueRouter);
+
+const app = new Vue({
   el: '#app',
-  data: {
-    message: "Hello World"
+  router,
+  data:{
+    toggleMobileMenu: false,
+    store: store.state
   },
-  render (h) {
-    return h('h3', this.message)
+  methods:{
+    toggleMobileMenuClick(){
+      this.toggleMobileMenu = !this.toggleMobileMenu;
+    }
   }
 });

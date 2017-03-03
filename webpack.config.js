@@ -23,16 +23,14 @@ module.exports = {
           loaders: ["style-loader", "css-loader", "sass-loader"]
       },
       {
-          test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-          loader : 'file-loader'
+            test: /\.(eot|svg|ttf|woff|woff2)$/,
+            loader: 'file-loader?name=[name].[ext]&publicPath=dist/&outputPath=/'
       }
     ]
   },
     plugins: [
         new CopyWebPack([
-            {from: 'src/images/', to:"images/"},
-            {from:'node_modules/font-awesome/fonts', to:'./fonts'},
-            {from:'index.html', to:'index.html'}
+            {from: 'src/images/', to:"images/"}
         ])
     ]
 }

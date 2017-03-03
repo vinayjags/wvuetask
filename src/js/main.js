@@ -1,5 +1,4 @@
-require("../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss");
-require("../../node_modules/font-awesome/scss/font-awesome.scss");
+import fonst from '../css/fonts.scss';
 require("../css/main.scss");
 import Vue from 'vue'
 

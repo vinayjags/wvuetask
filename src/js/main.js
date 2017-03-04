@@ -15,6 +15,20 @@ const app = new Vue({
   methods:{
     toggleMobileMenuClick(){
       this.toggleMobileMenu = !this.toggleMobileMenu;
+    },
+    hideNavMenu(logout){
+      this.toggleMobileMenu = false;
+      if(logout == true){
+        store.setLoginName('');
+        store.setLoginState(false);
+        this.$router.push('/');
+      }
+    }
+  },
+  computed:{
+    userName(){
+      let nameSplit = this.store.loginName.trim().split(" ");
+      return "Hello, "+nameSplit[0];
     }
   }
 });

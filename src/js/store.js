@@ -2,7 +2,8 @@
  * of the application across different components
  */
 const state = {
-    isLoggedin: false
+    isLoggedin: false,
+    loginName: ''
 }
 
 class Store{
@@ -11,6 +12,9 @@ class Store{
     }
     setLoginState(newLoginState){
         this.state.isLoggedin = newLoginState;
+    }
+    setLoginName(newLoginName){
+        this.state.loginName = newLoginName;
     }
 }
 

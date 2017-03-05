@@ -7,3 +7,35 @@ body{
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
 }
+
+.content {
+    ul.task-list{
+        padding: 0px;
+        margin: 0px;
+        list-style-type: none;
+        .task-item{
+            margin: 5px 0px 5px 0px;
+            border: 1px solid #e1e1e1;
+            background-color: white;
+            display: table;
+            width: 100%;
+            min-height: 50px;
+            .checkbox{
+                background-color: #f0f0f0;
+                height: 100%;
+                width: 41px;
+                align-items: stretch;
+                flex: 0.1;
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+            }
+            .task-title{
+                padding: 16px;
+                align-items: stretch;
+                flex: 1;
+                display: table-cell;
+            }
+        }
+    }
+}

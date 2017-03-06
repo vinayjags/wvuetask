@@ -6,8 +6,8 @@ let routes = [
         component: require('./views/Home.vue')
     },
     {
-        path:'/task',
-        component: require('./views/Task.vue')
+        path:'/notes',
+        component: require('./views/Note.vue')
     }
 ];
 

@@ -8,12 +8,37 @@ body{
     font-weight: 400;
 }
 
+.box{
+    background-color: white;
+    padding: 10px;
+}
+
+.datepicker{
+    input{
+        border: 0px;
+        font-size: 1em;
+        width: 100%;
+    }
+}
+
+.add-form{
+    margin-bottom: 10px;
+}
+
+.textarea{
+    resize: none;
+}
+
+.filter-notes{
+    margin: 10px 0px;
+}
+
 .content {
-    ul.task-list{
+    ul.note-list{
         padding: 0px;
         margin: 0px;
         list-style-type: none;
-        .task-item{
+        .note-item{
             margin: 5px 0px 5px 0px;
             border: 1px solid #e1e1e1;
             background-color: white;
@@ -29,12 +54,26 @@ body{
                 display: table-cell;
                 text-align: center;
                 vertical-align: middle;
+                .is-not-completed{
+                    .complete-note{
+                        width: 25px;
+                        height: 25px;
+                        background-color: white;
+                        margin: auto;
+                        border-radius: 50%;
+                    }
+                }
             }
-            .task-title{
+            .note-title{
                 padding: 16px;
                 align-items: stretch;
                 flex: 1;
                 display: table-cell;
+                .note-status{
+                    a{
+                        font-size: 12px;
+                    }
+                }
             }
         }
     }

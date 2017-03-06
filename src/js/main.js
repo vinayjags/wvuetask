@@ -1,11 +1,13 @@
-import Vue from 'vue'
+import Vue from 'vue';
 import VueRouter from 'vue-router';
 import router from './router';
 import store from './store';
 import Element from './views/Element.vue';
 
+window._ = require('lodash');
+
 Vue.use(VueRouter);
-Vue.component('task-list',Element);
+Vue.component('notes-list',Element);
 
 const app = new Vue({
   el: '#app',

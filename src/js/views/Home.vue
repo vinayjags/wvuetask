@@ -24,7 +24,7 @@ import store from '../store';
 export default {
   created(){
     if(this.store.isLoggedin == true){
-      this.$router.push('/task');
+      this.$router.push('/notes');
     }
   },
   data () {
@@ -46,7 +46,7 @@ export default {
           store.setLoginName(this.name.trim());
           store.setLoginState(true);
           this.isLoading = false;
-          this.$router.push('/task');
+          this.$router.push('/notes');
         },3000)
       }
     },

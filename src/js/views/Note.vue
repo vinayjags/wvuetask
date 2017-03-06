@@ -149,6 +149,7 @@ export default {
       this.newNoteTitle = title.replace(/<br \/>/g,'\n');
     },
     cancelUpdate(){
+      this.showTitleErrorMessage = false;
       this.isEdit = false;
       this.editNoteId = 0;
       this.newNoteTitle = "";
